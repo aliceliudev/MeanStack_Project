@@ -1,0 +1,44 @@
+<section class="blog-details-container">
+    <div class="container">
+
+        <!-- col-8 -->
+        <div class="blog-details-area">
+            <!-- blog details content area -->
+            <div class="details-area">
+                <h2 class="details-title">{{aBlog.title}}</h2>
+                <div class="details-img">
+                    <img src="assets/images/blog/{{aBlog.image}}" alt="blog single image">
+                </div>
+
+                <!-- <blockquote>
+                              Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                              <div class="icon"><i class="fas fa-quote-left"></i></div>
+                          </blockquote> -->
+                <p [innerHTML]="aBlog.description"></p>
+            </div>
+
+            <div class="details-footer">
+                <div class="footer-post">
+                    <span class="posted_by">Posted By : <a href="#">{{aBlog.author}} </a></span><br>
+                    <span class="details-post-date"><i class="far fa-calendar-alt"></i>{{aBlog.publishedDate}}</span>
+                </div>
+                <div class="detail-content-share">
+                    <ul>
+                        <li class="share-title">Share:</li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- //. blog details content area -->
+        </div>
+        <!-- //.col-8 -->
+
+
+    </div>
+
+</section>
+<!-- blog details page content area end -->

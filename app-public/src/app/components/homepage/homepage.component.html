@@ -1,0 +1,54 @@
+<section class="container">
+    <h2>About Atom Inc.</h2>
+    <p>We are building the cryptoeconomy – a more fair, accessible, efficient, and
+        transparent financial system enabled by crypto.</p>
+    <p>
+        We started with the radical idea that anyone, anywhere, should be able to easily and securely
+        send and receive Bitcoin. Today, we offer a trusted and easy-to-use platform for accessing the broader
+        cryptoeconomy.
+    </p>
+</section>
+<!-- featured coins here -->
+<app-featured></app-featured>
+<section class="container">
+    <div class="market_display">
+        <h2>Prices by Market Cap</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="text_left">#</th>
+                    <th class="text_left">Name</th>
+                    <th>Price</th>
+                    <!-- <th>24h</th>
+                    <th>7d</th> -->
+                    <th>Market Cap</th>
+                    <th>Volume</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let coin of coins; let i = index">
+                    <td class="text_left">
+                        <p>{{i+1}}</p>
+                    </td>
+                    <td class="text_left">
+                        <i class="cc {{ coin.abbre }}"></i>
+                        {{ coin.name }} <span class="abbr">{{ coin.abbre }}</span>
+                    </td>
+                    <td>${{ coin.price }}</td>
+                    <td>${{ coin.marketCap }}</td>
+                    <td>${{ coin.volume }}
+                    </td>
+                    <td>
+                        {{ coin.quantity }} {{ coin.abbre }}
+                    </td>
+                    <!-- <td *ngIf="coin.isFeatured" class="isFeatured"><i class="fa fa-check"></i></td>
+                    <td *ngIf="!coin.isFeatured" class="isNotFeatured"><i class="fa fa-times "></i></td> -->
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- footer banner here -->
+<app-footer-banner></app-footer-banner>
